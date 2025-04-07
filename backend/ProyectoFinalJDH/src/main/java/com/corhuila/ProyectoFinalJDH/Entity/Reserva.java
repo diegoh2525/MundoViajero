@@ -5,7 +5,9 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
+@Data
 @Entity
 @Table(name = "reserva")
 public class Reserva {
@@ -54,75 +56,4 @@ public class Reserva {
 	@Column(name = "fecha_eliminacion")
 	private LocalDateTime fechaEliminacion;
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Usuario getUsuario() {
-		return usuario;
-	}
-
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
-	}
-
-	public List<Transporte> getTransportes() {
-		return transportes;
-	}
-
-	public void setTransportes(List<Transporte> transportes) {
-		this.transportes = transportes;
-	}
-
-	public List<Alojamiento> getAlojamientos() {
-		return alojamientos;
-	}
-
-	public void setAlojamientos(List<Alojamiento> alojamientos) {
-		this.alojamientos = alojamientos;
-	}
-
-	public List<Actividades> getActividades() {
-		return actividades;
-	}
-
-	public void setActividades(List<Actividades> actividades) {
-		this.actividades = actividades;
-	}
-
-	public Boolean getEstado() {
-		return estado;
-	}
-
-	public void setEstado(Boolean estado) {
-		this.estado = estado;
-	}
-
-	public LocalDateTime getFechaCreacion() {
-		return fechaCreacion;
-	}
-
-	public void setFechaCreacion(LocalDateTime fechaCreacion) {
-		this.fechaCreacion = fechaCreacion;
-	}
-
-	public LocalDateTime getFechaModificacion() {
-		return fechaModificacion;
-	}
-
-	public void setFechaModificacion(LocalDateTime fechaModificacion) {
-		this.fechaModificacion = fechaModificacion;
-	}
-
-	public LocalDateTime getFechaEliminacion() {
-		return fechaEliminacion;
-	}
-
-	public void setFechaEliminacion(LocalDateTime fechaEliminacion) {
-		this.fechaEliminacion = fechaEliminacion;
-	}
 }

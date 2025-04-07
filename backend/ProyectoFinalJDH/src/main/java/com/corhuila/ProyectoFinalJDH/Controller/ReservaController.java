@@ -16,47 +16,46 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.corhuila.ProyectoFinalJDH.DTO.ReservaDTO;
-import com.corhuila.ProyectoFinalJDH.Service.ReservaService;
+import com.corhuila.ProyectoFinalJDH.DTO.Response.ReservaResponse;
 import com.corhuila.ProyectoFinalJDH.Entity.Reserva;
-import com.corhuila.ProyectoFinalJDH.IService.IReservaService;
+import com.corhuila.ProyectoFinalJDH.Service.IService.IReservaService;
 
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("v1/ProyectoFinalJDH/Reserva")
 public class ReservaController {
-	
+
 	@Autowired
 	private IReservaService service;
-	
+
 	@GetMapping()
     public List<Reserva> all() {
         return service.all();
     }
-	 
+
 	 @GetMapping("{id}")
     public Optional<Reserva> findById(@PathVariable Long id) {
         return service.findById(id);
     }
-	 
+
 	 @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
     public Reserva save(@RequestBody Reserva reserva) {
         return service.save(reserva);
     }
-	 
+
 	 @PutMapping("{id}")
     @ResponseStatus(code = HttpStatus.OK)
     public void update(@RequestBody Reserva reserva, @PathVariable Long id) {
         service.update(reserva, id);
     }
-	 
+
 	 @PutMapping("deleteLogical/{id}")
     @ResponseStatus(code = HttpStatus.OK)
     public void deleteLogical(@PathVariable Long id) {
         service.deleteLogical(id);
     }
-	 
+
 	 @DeleteMapping("{id}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
     public void deletePhysical(@PathVariable Long id) {
@@ -65,7 +64,7 @@ public class ReservaController {
 
     @GetMapping("/detalle/{id}")
     @ResponseStatus(code = HttpStatus.OK)
-    public ReservaDTO obtenerDetalleReserva(@PathVariable Long id) {
+    public ReservaResponse obtenerDetalleReserva(@PathVariable Long id) {
         return service.obtenerReservaDTO(id);
     }
 

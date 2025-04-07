@@ -1,8 +1,8 @@
-package com.corhuila.ProyectoFinalJDH.DTO;
+package com.corhuila.ProyectoFinalJDH.DTO.Response;
 
 import java.util.List;
 
-public class ReservaDTO {
+public class ReservaResponse {
 
     private Long id;
     private String usuarioNombre;

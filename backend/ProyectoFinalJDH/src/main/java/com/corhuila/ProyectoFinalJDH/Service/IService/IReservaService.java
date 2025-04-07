@@ -1,9 +1,9 @@
-package com.corhuila.ProyectoFinalJDH.IService;
+package com.corhuila.ProyectoFinalJDH.Service.IService;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.corhuila.ProyectoFinalJDH.DTO.ReservaDTO;
+import com.corhuila.ProyectoFinalJDH.DTO.Response.ReservaResponse;
 import com.corhuila.ProyectoFinalJDH.Entity.Reserva;
 
 public interface IReservaService {
@@ -26,5 +26,5 @@ public interface IReservaService {
 	// Eliminar lógico
 	public void deleteLogical(Long id);
 
-	ReservaDTO obtenerReservaDTO(Long id);
+	ReservaResponse obtenerReservaDTO(Long id);
 }

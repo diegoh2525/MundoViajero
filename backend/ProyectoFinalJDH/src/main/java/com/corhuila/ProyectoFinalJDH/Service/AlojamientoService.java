@@ -8,14 +8,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.corhuila.ProyectoFinalJDH.Entity.Alojamiento;
-import com.corhuila.ProyectoFinalJDH.IRepository.IAlojamientoRepository;
-import com.corhuila.ProyectoFinalJDH.IService.IAlojamientoService;
+import com.corhuila.ProyectoFinalJDH.Repository.AlojamientoRepository;
+import com.corhuila.ProyectoFinalJDH.Service.IService.IAlojamientoService;
 
 @Service
 public class AlojamientoService implements IAlojamientoService {
 
 	@Autowired
-	private IAlojamientoRepository repository;
+	private AlojamientoRepository repository;
 	
 	@Override
 	public List<Alojamiento> all() {

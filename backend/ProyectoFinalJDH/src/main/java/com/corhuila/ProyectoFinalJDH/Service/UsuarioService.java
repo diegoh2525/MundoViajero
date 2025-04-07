@@ -8,14 +8,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.corhuila.ProyectoFinalJDH.Entity.Usuario;
-import com.corhuila.ProyectoFinalJDH.IRepository.IUsuarioRepository;
-import com.corhuila.ProyectoFinalJDH.IService.IUsuarioService;
+import com.corhuila.ProyectoFinalJDH.Repository.UsuarioRepository;
+import com.corhuila.ProyectoFinalJDH.Service.IService.IUsuarioService;
 
 @Service
 public class UsuarioService implements IUsuarioService {
 
 	@Autowired
-	private IUsuarioRepository repository;
+	private UsuarioRepository repository;
 	
 	@Override
 	public List<Usuario> all() {
@@ -45,7 +45,7 @@ public class UsuarioService implements IUsuarioService {
             Usuario usuarioUpdate = op.get();
             usuarioUpdate.setNombre(usuario.getNombre());
             usuarioUpdate.setCorreo(usuario.getCorreo());
-            usuarioUpdate.setContrasenia(usuario.getContrasenia());
+            usuarioUpdate.setPassword(usuario.getPassword());
             usuarioUpdate.setFechaModificacion(LocalDateTime.now());
             
             //Actualizar el objeto

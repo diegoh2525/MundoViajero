@@ -1,4 +1,4 @@
-package com.corhuila.ProyectoFinalJDH.IService;
+package com.corhuila.ProyectoFinalJDH.Service.IService;
 
 import java.util.List;
 import java.util.Optional;

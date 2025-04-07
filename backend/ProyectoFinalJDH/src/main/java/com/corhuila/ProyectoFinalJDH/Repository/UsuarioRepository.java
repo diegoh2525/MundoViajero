@@ -1,4 +1,4 @@
-package com.corhuila.ProyectoFinalJDH.IRepository;
+package com.corhuila.ProyectoFinalJDH.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.corhuila.ProyectoFinalJDH.Entity.Usuario;
 
 @Repository
-public interface IUsuarioRepository extends JpaRepository<Usuario, Long>{
+public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 
 }

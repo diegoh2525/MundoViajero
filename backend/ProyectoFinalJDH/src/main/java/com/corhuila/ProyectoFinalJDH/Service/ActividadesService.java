@@ -8,14 +8,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.corhuila.ProyectoFinalJDH.Entity.Actividades;
-import com.corhuila.ProyectoFinalJDH.IRepository.IActividadesRepository;
-import com.corhuila.ProyectoFinalJDH.IService.IActividadesService;
+import com.corhuila.ProyectoFinalJDH.Repository.ActividadesRepository;
+import com.corhuila.ProyectoFinalJDH.Service.IService.IActividadesService;
 
 @Service
 public class ActividadesService implements IActividadesService {
 
 	@Autowired
-	private IActividadesRepository repository;
+	private ActividadesRepository repository;
 	
 	@Override
 	public List<Actividades> all() {

@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
-import com.corhuila.ProyectoFinalJDH.DTO.ReservaDTO;
+import com.corhuila.ProyectoFinalJDH.DTO.Response.ReservaResponse;
 import com.corhuila.ProyectoFinalJDH.Entity.Actividades;
 import com.corhuila.ProyectoFinalJDH.Entity.Alojamiento;
 import com.corhuila.ProyectoFinalJDH.Entity.Transporte;
@@ -13,14 +13,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.corhuila.ProyectoFinalJDH.Entity.Reserva;
-import com.corhuila.ProyectoFinalJDH.IRepository.IReservaRepository;
-import com.corhuila.ProyectoFinalJDH.IService.IReservaService;
+import com.corhuila.ProyectoFinalJDH.Repository.ReservaRepository;
+import com.corhuila.ProyectoFinalJDH.Service.IService.IReservaService;
 
 @Service
 public class ReservaService implements IReservaService {
 
 	@Autowired
-	private IReservaRepository repository;
+	private ReservaRepository repository;
 	
 	@Override
 	public List<Reserva> all() {
@@ -100,7 +100,7 @@ public class ReservaService implements IReservaService {
 		return costoTransportes + costoAlojamientos + costoActividades;
 	}
 
-	public ReservaDTO obtenerReservaDTO(Long id) {
+	public ReservaResponse obtenerReservaDTO(Long id) {
 		Optional<Reserva> reservaOptional = repository.findById(id);
 
 		if (reservaOptional.isEmpty()) {
@@ -108,9 +108,9 @@ public class ReservaService implements IReservaService {
 		}
 
 		Reserva reserva = reservaOptional.get();
-		int costoTotal = calcularCostoTotal(reserva);
 
-		return ReservaMapper.convertirReservaAReservaDTO(reserva, costoTotal);
+		// Ya no necesitas calcular el costo manualmente, el Mapper lo hace.
+		return ReservaMapper.toDTO(reserva);
 	}
 
 

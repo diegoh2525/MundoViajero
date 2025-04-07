@@ -8,14 +8,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.corhuila.ProyectoFinalJDH.Entity.Transporte;
-import com.corhuila.ProyectoFinalJDH.IRepository.ITransporteRepository;
-import com.corhuila.ProyectoFinalJDH.IService.ITransporteService;
+import com.corhuila.ProyectoFinalJDH.Repository.TransporteRepository;
+import com.corhuila.ProyectoFinalJDH.Service.IService.ITransporteService;
 
 @Service
 public class TransporteService implements ITransporteService {
 
 	@Autowired
-	private ITransporteRepository repository;
+	private TransporteRepository repository;
 	
 	@Override
 	public List<Transporte> all() {
