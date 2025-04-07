@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Transportes</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('../../asset/img/viaje.jpg') center/cover no-repeat; /* Cambia 'ruta-de-tu-imagen.jpg' por la URL o ruta local de tu imagen */
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+            background-color: #54362D;
+            color: white;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8); /* Añadir fondo blanco semi-transparente al contenedor para mejorar la legibilidad */
+            padding: 20px;
+            margin: 20px auto;
+        }
+
+    </style>
+
+    <!-- Enlaces a Bootstrap y Bootswatch (Sustituye 'cerulean' con el tema que prefieras) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
+
+    <!-- Librería de ajax -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Vincular js de Rol -->
+    <script src="../../js/ProyectoFinal/transporte.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <label>Gestión de Transportes</label>
+        </header>
+        <div id="inputData">
+            <table class="table">
+                <tr>
+                    <td>
+                        Tipo
+                    </td>
+                    <td>
+                        <input type="hidden" id="id" name="id">
+                        <input type="text" class="form-control" name="tipo" id="tipo" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Empresa
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="empresa" id="empresa" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Origen
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="origen" id="origen" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Destino
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="destino" id="destino" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Fecha Inicio
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="fechaInicio" id="fechaInicio" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Fecha Final
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="fechaFinal" id="fechaFinal" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Hora viaje ida
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="horaViajeida" id="horaViajeida" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Hora viaje vuelta
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="horaViajevuelta" id="horaViajevuelta" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Costo
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="costo" id="costo" value="">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="botones">
+            <input type="button" class="btn btn-secondary" value="Guardar" onclick="save()">            
+        </div>
+        </br>
+        <div id="outputData">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Empresa</th>
+                        <th>Origen</th>
+                        <th>Destino</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha Final</th>
+                        <th>Hora Viaje Ida</th>
+                        <th>Hora Viaje Vuelta</th>
+                        <th>Costo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="loadData">
+                    <!-- Aquí llega los datos de la BD -->
+                                      
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Scripts de Bootstrap (jQuery y Popper.js) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+</body>
+</html>
+<script>
+    all();
+</script>

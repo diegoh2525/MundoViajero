@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Roles</title>
+
+    <!-- Enlaces a Bootstrap y Bootswatch (Sustituye 'cerulean' con el tema que prefieras) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
+
+    <!-- Librería de ajax -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Vincular js de Rol -->
+    <script src="../../js/seguridad/rol.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <label>Gestión de Roles</label>
+        </div>
+        <div id="inputData">
+            <table class="table">
+                <tr>
+                    <td>
+                        Código
+                    </td>
+                    <td>
+                        <input type="hidden" id="id" name="id">
+                        <input type="text" class="form-control" name="codigo" id="codigo" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Nombre
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="nombre" id="nombre" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Descripción
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="descripcion" id="descripcion" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Estado
+                    </td>
+                    <td>
+                        <select class="form-control" name="estado" id="estado">
+                            <option value="" disabled selected>--Seleccionar--</option>
+                            <option value="0">Inactivo</option>
+                            <option value="1">Activo</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="botones">
+            <input type="button" class="btn btn-primary" value="Guardar" onclick="save()">            
+        </div>
+        </br>
+        <div id="outputData">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="loadData">
+                    <!-- Aquí llega los datos de la BD -->
+                                      
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Scripts de Bootstrap (jQuery y Popper.js) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+</body>
+</html>
+<script>
+    all();
+</script>
