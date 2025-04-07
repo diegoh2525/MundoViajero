@@ -4,6 +4,11 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
+import com.corhuila.ProyectoFinalJDH.DTO.ReservaDTO;
+import com.corhuila.ProyectoFinalJDH.Entity.Actividades;
+import com.corhuila.ProyectoFinalJDH.Entity.Alojamiento;
+import com.corhuila.ProyectoFinalJDH.Entity.Transporte;
+import com.corhuila.ProyectoFinalJDH.Mapper.ReservaMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -43,10 +48,10 @@ public class ReservaService implements IReservaService {
         }else {
         	 //Crear nuevo objeto que va a contener los datos que se van actualizar
             Reserva reservaUpdate = op.get();
-            reservaUpdate.setUsuarioId(reserva.getUsuarioId());
-            reservaUpdate.setTransporteId(reserva.getTransporteId());
-            reservaUpdate.setAlojamientoId(reserva.getAlojamientoId());
-            reservaUpdate.setActividadesId(reserva.getActividadesId());
+            reservaUpdate.setUsuario(reserva.getUsuario());
+            reservaUpdate.setTransportes(reserva.getTransportes());
+            reservaUpdate.setAlojamientos(reserva.getAlojamientos());
+            reservaUpdate.setActividades(reserva.getActividades());
             reservaUpdate.setEstado(reserva.getEstado());
             reservaUpdate.setFechaModificacion(LocalDateTime.now());
             
@@ -77,5 +82,36 @@ public class ReservaService implements IReservaService {
             //Actualizar el objeto
             repository.save(reservaUpdate);
         }		
-	}	
+	}
+
+	public int calcularCostoTotal(Reserva reserva) {
+		int costoTransportes = reserva.getTransportes().stream()
+				.mapToInt(Transporte::getCosto)
+				.sum();
+
+		int costoAlojamientos = reserva.getAlojamientos().stream()
+				.mapToInt(Alojamiento::getCosto)
+				.sum();
+
+		int costoActividades = reserva.getActividades().stream()
+				.mapToInt(Actividades::getCosto)
+				.sum();
+
+		return costoTransportes + costoAlojamientos + costoActividades;
+	}
+
+	public ReservaDTO obtenerReservaDTO(Long id) {
+		Optional<Reserva> reservaOptional = repository.findById(id);
+
+		if (reservaOptional.isEmpty()) {
+			throw new RuntimeException("Reserva no encontrada");
+		}
+
+		Reserva reserva = reservaOptional.get();
+		int costoTotal = calcularCostoTotal(reserva);
+
+		return ReservaMapper.convertirReservaAReservaDTO(reserva, costoTotal);
+	}
+
+
 }

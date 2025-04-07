@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.corhuila.ProyectoFinalJDH.DTO.ReservaDTO;
+import com.corhuila.ProyectoFinalJDH.Service.ReservaService;
 import com.corhuila.ProyectoFinalJDH.Entity.Reserva;
 import com.corhuila.ProyectoFinalJDH.IService.IReservaService;
 
@@ -60,5 +62,12 @@ public class ReservaController {
     public void deletePhysical(@PathVariable Long id) {
         service.deletePhysical(id);
     }
+
+    @GetMapping("/detalle/{id}")
+    @ResponseStatus(code = HttpStatus.OK)
+    public ReservaDTO obtenerDetalleReserva(@PathVariable Long id) {
+        return service.obtenerReservaDTO(id);
+    }
+
 
 }
