@@ -1,27 +1,24 @@
 function all(){
-
     $.ajax({
-        url: 'http://localhost:9000/v1/ProyectoFinalJDH/Usuario', // Reemplaza con la URL de tu API
+        url: 'http://localhost:8080/v1/ProyectoFinalJDH/Usuario',
         method: 'GET',
         success: function(data) {
-            // Limpiar el cuerpo de la tabla
             $('#loadData').empty();
-
-            // Iterar sobre los datos y agregar filas a la tabla
             $.each(data, function(index, item) {
                 if(item.fechaEliminacion == null){
                     $('#loadData').append(`
-                    <tr>
-                        <td>${item.nombre}</td>
-                        <td>${item.correo}</td>
-                        <td>${item.contrasenia}</td>
-                        <td>
-                            <input type="button" class="btn btn-success" value="Editar" onclick="findById(`+item.id+`)">
-                            <input type="button" class="btn btn-warning" value="Eliminar" onclick="deleteLogical(`+item.id+`)">
-                            <input type="button" class="btn btn-danger" value="Eliminar" onclick="deletePhysical(`+item.id+`)">
-                        </td>
-                    </tr>
-                `);
+                        <tr>
+                            <td>${item.nombre}</td>
+                            <td>${item.correo}</td>
+                            <td>${item.password}</td>
+                            <td>${item.estado ? 'Activo' : 'Inactivo'}</td>
+                            <td>
+                                <input type="button" class="btn btn-success" value="Editar" onclick="findById(${item.id})">
+                                <input type="button" class="btn btn-warning" value="Eliminar Lógico" onclick="deleteLogical(${item.id})">
+                                <input type="button" class="btn btn-danger" value="Eliminar Físico" onclick="deletePhysical(${item.id})">
+                            </td>
+                        </tr>
+                    `);
                 }
             });
         },
@@ -29,133 +26,110 @@ function all(){
             console.error('Error al cargar datos desde la API:', error);
         }
     });
-} 
+}
 
 function findById(id){
     $.ajax({
-        url: 'http://localhost:9000/v1/ProyectoFinalJDH/Usuario/'+id, // Reemplaza con la URL de tu API
+        url: 'http://localhost:8080/v1/ProyectoFinalJDH/Usuario/' + id,
         method: 'GET',
         success: function(data) {
             $("#id").val(data.id);
             $("#nombre").val(data.nombre);
             $("#correo").val(data.correo);
-            $("#contrasenia").val(data.contrasenia);
-
-            // Cambiar el evento onclick y el valor del botón
+            $("#password").val(data.password);
+            $("#estado").val(data.estado.toString());
             $("#botones input").attr("onclick", "update()").val("Actualizar");
-
         },
         error: function(error) {
-            console.error('Error al cargar datos desde la API:', error);
+            console.error('Error al buscar usuario:', error);
         }
     });
 }
 
-function save(){    
-     // Crear un objeto JSON con los datos
-     var jsonData = {
-         "nombre": $("#nombre").val(),
-         "correo": $("#correo").val(),
-         "contrasenia": $("#contrasenia").val(),
-     };
-
-     // Enviar datos al servidor mediante AJAX
-     $.ajax({
-         url: 'http://localhost:9000/v1/ProyectoFinalJDH/Usuario', // Reemplaza con la URL de tu API
-         method: 'POST',  // Cambia a 'PUT' si es una actualización
-         contentType: 'application/json',
-         data: JSON.stringify(jsonData),
-         success: function(response) {
-             alert('Datos guardados exitosamente:', response);
-             // Puedes realizar acciones adicionales después de guardar los datos
-
-             //Cargar o actaulizar los datos
-             all();
-             cleanData();
-         },
-         error: function(error) {
-             alert('Error al guardar datos:', error);
-         }
-     });
-}
-
-function update(){
-
-    // Crear un objeto JSON con los datos
+function save(){
     var jsonData = {
         "nombre": $("#nombre").val(),
         "correo": $("#correo").val(),
-        "contrasenia": $("#contrasenia").val(),
+        "password": $("#password").val(),
+        "estado": $("#estado").val() === "true"
     };
 
-    // Enviar datos al servidor mediante AJAX
     $.ajax({
-        url: 'http://localhost:9000/v1/ProyectoFinalJDH/Usuario/'+$("#id").val(), // Reemplaza con la URL de tu API
-        method: 'PUT',  // Cambia a 'PUT' si es una actualización
+        url: 'http://localhost:8080/v1/ProyectoFinalJDH/Usuario',
+        method: 'POST',
         contentType: 'application/json',
         data: JSON.stringify(jsonData),
         success: function(response) {
-            alert('Datos se modificaron exitosamente:', response);
-            // Puedes realizar acciones adicionales después de guardar los datos
-
-            //Cargar o actaulizar los datos
+            alert('Datos guardados exitosamente');
             all();
             cleanData();
         },
         error: function(error) {
-            alert('Error al modificar datos:', error);
+            alert('Error al guardar datos');
         }
-    });    
+    });
+}
+
+function update(){
+    var jsonData = {
+        "nombre": $("#nombre").val(),
+        "correo": $("#correo").val(),
+        "password": $("#password").val(),
+        "estado": $("#estado").val() === "true"
+    };
+
+    $.ajax({
+        url: 'http://localhost:8080/v1/ProyectoFinalJDH/Usuario/' + $("#id").val(),
+        method: 'PUT',
+        contentType: 'application/json',
+        data: JSON.stringify(jsonData),
+        success: function(response) {
+            alert('Datos actualizados exitosamente');
+            all();
+            cleanData();
+            $("#botones input").attr("onclick", "save()").val("Guardar");
+        },
+        error: function(error) {
+            alert('Error al actualizar datos');
+        }
+    });
 }
 
 function deletePhysical(id){
- 
-    // Enviar datos al servidor mediante AJAX
     $.ajax({
-        url: 'http://localhost:9000/v1/ProyectoFinalJDH/Usuario/'+id, // Reemplaza con la URL de tu API
-        method: 'DELETE',  // Cambia a 'PUT' si es una actualización
-        contentType: 'application/json',
+        url: 'http://localhost:8080/v1/ProyectoFinalJDH/Usuario/' + id,
+        method: 'DELETE',
         success: function(response) {
-            alert('Datos se eliminó exitosamente de manera permanente:', response);
-            // Puedes realizar acciones adicionales después de guardar los datos
-
-            //Cargar o actaulizar los datos
+            alert('Usuario eliminado permanentemente');
             all();
             cleanData();
         },
         error: function(error) {
-            alert('Error al eliminar dato:', error);
+            alert('Error al eliminar usuario');
         }
-    });  
+    });
 }
 
 function deleteLogical(id){
-   // Crear un objeto JSON con los datos
-    var jsonData = {
-    };
-    // Enviar datos al servidor mediante AJAX
     $.ajax({
-        url: 'http://localhost:9000/v1/ProyectoFinalJDH/Usuario/deleteLogical/'+id, // Reemplaza con la URL de tu API
-        method: 'PUT',  // Cambia a 'PUT' si es una actualización
+        url: 'http://localhost:8080/v1/ProyectoFinalJDH/Usuario/deleteLogical/' + id,
+        method: 'PUT',
         contentType: 'application/json',
-        data: JSON.stringify(jsonData),
+        data: JSON.stringify({}),
         success: function(response) {
-            alert('Dato se eliminó exitosamente:', response);
-            // Puedes realizar acciones adicionales después de guardar los datos
-
-            //Cargar o actaulizar los datos
+            alert('Usuario eliminado lógicamente');
             all();
         },
         error: function(error) {
-            alert('Error al eliminar el registro:', error);
+            alert('Error al eliminar lógicamente');
         }
-    });  
+    });
 }
 
 function cleanData(){
     $("#id").val("");
     $("#nombre").val("");
     $("#correo").val("");
-    $("#contrasenia").val("");
+    $("#password").val("");
+    $("#estado").val("true");
 }
-
