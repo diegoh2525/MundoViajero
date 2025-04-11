@@ -4,58 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mundo Viajero!</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos de redes (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            background: url('/asset/img/viaje.jpg') center/cover no-repeat; /* Cambia 'tu-imagen-de-fondo.jpg' por la URL de tu imagen */
+            background: url('/asset/img/viaje.jpg') center/cover no-repeat;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            color: #fff; /* Color de texto para que sea visible en el fondo */
+            color: #fff;
         }
 
         header {
             text-align: center;
-            padding: 3px;
-            background-color: #54362D;
+            padding: 20px;
+            background-color: rgba(84, 54, 45, 0.9);
             color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         main {
             flex: 1;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
         }
 
+        .card {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+
         .welcome-message {
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #ffffff;
+            margin-bottom: 30px;
+            font-size: 28px;
             font-weight: bold;
         }
 
-
         nav {
-            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
         }
 
         nav a {
-            margin: 0 10px;
             text-decoration: none;
             color: #fff;
-            padding: 8px 16px;
+            padding: 10px 20px;
             background-color: #54362D;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
 
         nav a:hover {
             background-color: #FFDB93;
+            color: #000;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: rgba(84, 54, 45, 0.9);
+            text-align: center;
+            padding: 15px 10px;
+            color: white;
+            font-size: 14px;
+            margin-top: auto;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #FFDB93;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                width: 90%;
+                padding: 20px;
+            }
+            .welcome-message {
+                font-size: 22px;
+            }
         }
     </style>
 </head>
@@ -65,20 +117,28 @@
     </header>
 
     <main>
-        <div class="welcome-message">
-            <p>Gestion de datos Mundo Viajero</p>
+        <div class="card">
+            <div class="welcome-message">
+                Gestión de Datos Mundo Viajero
+            </div>
+            
+            <nav>
+                <a href="/view/ProyectoFinal/usuario.html">Usuarios</a>
+                <a href="/view/ProyectoFinal/transporte.html">Transportes</a>
+                <a href="/view/ProyectoFinal/alojamiento.html">Alojamientos</a>
+                <a href="/view/ProyectoFinal/actividades.html">Actividades</a>
+                <a href="/view/ProyectoFinal/reservas.html">Reservas</a>
+            </nav>
         </div>
-        
-        <nav>
-            <a href="/view/ProyectoFinal/usuario.html">Usuarios</a>
-            <a href="/view/ProyectoFinal/transporte.html">Transportes</a>
-            <a href="/view/ProyectoFinal/alojamiento.html">Alojamientos</a>
-            <a href="/view/ProyectoFinal/actividades.html">Actividades</a>
-            <a href="/view/ProyectoFinal/reservas.html">Reservas</a>
-        </nav>
     </main>
 
-    <!-- Contenido adicional como formularios de registro e inicio de sesión podría ir aquí -->
-
+    <footer>
+        Desarrollado por JD Herrera &copy; 2025 - Mundo Viajero
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
 </body>
 </html>

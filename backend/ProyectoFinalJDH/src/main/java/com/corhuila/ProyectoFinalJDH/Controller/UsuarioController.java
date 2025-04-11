@@ -62,4 +62,13 @@ public class UsuarioController {
     public void deletePhysical(@PathVariable Long id) {
         service.deletePhysical(id);
     }
+
+    @PostMapping("/login")
+    public UsuarioResponse login(@RequestBody UsuarioRequest request) {
+        Optional<Usuario> usuario = service.login(request.getCorreo(), request.getPassword());
+
+        return usuario.map(UsuarioMapper::toResponse)
+                .orElseThrow(() -> new RuntimeException("Credenciales incorrectas"));
+    }
+
 }

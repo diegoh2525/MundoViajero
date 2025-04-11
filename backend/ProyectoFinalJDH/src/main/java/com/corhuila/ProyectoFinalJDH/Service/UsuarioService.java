@@ -75,5 +75,13 @@ public class UsuarioService implements IUsuarioService {
             //Actualizar el objeto
             repository.save(usuarioUpdate);
         }		
-	}	
+	}
+
+	@Override
+	public Optional<Usuario> login(String correo, String password) {
+		return repository.findAll().stream()
+				.filter(u -> u.getCorreo().equals(correo) && u.getPassword().equals(password))
+				.findFirst();
+	}
+
 }
