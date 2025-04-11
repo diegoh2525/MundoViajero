@@ -7,5 +7,5 @@ public class UsuarioRequest {
     private String nombre;
     private String correo;
     private String password;
-    private boolean estado;
+    private boolean estado = true;
 }
