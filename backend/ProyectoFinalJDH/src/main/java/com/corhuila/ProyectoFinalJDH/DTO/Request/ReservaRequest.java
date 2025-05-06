@@ -9,4 +9,5 @@ public class ReservaRequest {
     private List<Long> transportesIds;
     private List<Long> alojamientosIds;
     private List<Long> actividadesIds;
+    private String fechaViaje;
 }

@@ -1,15 +1,15 @@
-function all(){
+function all() {
 
     $.ajax({
-        url: 'http://localhost:9000/v1/ProyectoFinalJDH/Reserva', // Reemplaza con la URL de tu API
+        url: 'http://localhost:8080/v1/ProyectoFinalJDH/Reserva',
         method: 'GET',
-        success: function(data) {
+        success: function (data) {
             // Limpiar el cuerpo de la tabla
             $('#loadData').empty();
 
             // Iterar sobre los datos y agregar filas a la tabla
-            $.each(data, function(index, item) {
-                if(item.fechaEliminacion == null){
+            $.each(data, function (index, item) {
+                if (item.fechaEliminacion == null) {
                     console.log(item);
                     $('#loadData').append(`
                     <tr>
@@ -19,26 +19,26 @@ function all(){
                         <td>${item.actividadesId.id}</td>
                         <td>${item.estado === true ? 'Confirmada' : 'Cancelada'}</td>
                         <td>
-                            <input type="button" class="btn btn-success" value="Editar" onclick="findById(`+item.id+`)">
-                            <input type="button" class="btn btn-warning" value="Eliminar" onclick="deleteLogical(`+item.id+`)">
-                            <input type="button" class="btn btn-danger" value="Eliminar" onclick="deletePhysical(`+item.id+`)">
+                            <input type="button" class="btn btn-success" value="Editar" onclick="findById(`+ item.id + `)">
+                            <input type="button" class="btn btn-warning" value="Eliminar" onclick="deleteLogical(`+ item.id + `)">
+                            <input type="button" class="btn btn-danger" value="Eliminar" onclick="deletePhysical(`+ item.id + `)">
                         </td>
                     </tr>
                 `);
                 }
             });
         },
-        error: function(error) {
+        error: function (error) {
             console.error('Error al cargar datos desde la API:', error);
         }
     });
-} 
+}
 
-function findById(id){
+function findById(id) {
     $.ajax({
-        url: 'http://localhost:9000/v1/ProyectoFinalJDH/Reserva/'+id, // Reemplaza con la URL de tu API
+        url: 'http://localhost:8080/v1/ProyectoFinalJDH/Reserva/' + id,
         method: 'GET',
-        success: function(data) {
+        success: function (data) {
             $("#id").val(data.id);
             $("#usuarioId").val(data.usuarioId.id);
             $("#transporteId").val(data.transporteId.id);
@@ -50,14 +50,14 @@ function findById(id){
             $("#botones input").attr("onclick", "update()").val("Actualizar");
 
         },
-        error: function(error) {
+        error: function (error) {
             console.error('Error al cargar datos desde la API:', error);
         }
     });
 }
 
-function save(){    
-     // Crear un objeto JSON con los datos
+function save() {
+    // Crear un objeto JSON con los datos
     var nuevoUsuarioId = parseInt($("#usuarioId").val(), 10);
     var nuevoTransporteId = parseInt($("#transporteId").val(), 10);
     var nuevoAlojamientoId = parseInt($("#alojamientoId").val(), 10);
@@ -80,27 +80,27 @@ function save(){
         "estado": ($("#estado").val() == "1" ? true : false)
     };
 
-     // Enviar datos al servidor mediante AJAX
-     $.ajax({
-         url: 'http://localhost:9000/v1/ProyectoFinalJDH/Reserva', // Reemplaza con la URL de tu API
-         method: 'POST',  // Cambia a 'PUT' si es una actualización
-         contentType: 'application/json',
-         data: JSON.stringify(jsonData),
-         success: function(response) {
-             alert('Datos guardados exitosamente:', response);
-             // Puedes realizar acciones adicionales después de guardar los datos
+    // Enviar datos al servidor mediante AJAX
+    $.ajax({
+        url: 'http://localhost:8080/v1/ProyectoFinalJDH/Reserva',
+        method: 'POST',  // Cambia a 'PUT' si es una actualización
+        contentType: 'application/json',
+        data: JSON.stringify(jsonData),
+        success: function (response) {
+            alert('Datos guardados exitosamente:', response);
+            // Puedes realizar acciones adicionales después de guardar los datos
 
-             //Cargar o actaulizar los datos
-             all();
-             cleanData();
-         },
-         error: function(error) {
-             alert('Error al guardar datos:', error);
-         }
-     });
+            //Cargar o actaulizar los datos
+            all();
+            cleanData();
+        },
+        error: function (error) {
+            alert('Error al guardar datos:', error);
+        }
+    });
 }
 
-function update(){
+function update() {
 
     // Crear un objeto JSON con los datos
     var nuevoUsuarioId = parseInt($("#usuarioId").val(), 10);
@@ -127,11 +127,11 @@ function update(){
 
     // Enviar datos al servidor mediante AJAX
     $.ajax({
-        url: 'http://localhost:9000/v1/ProyectoFinalJDH/Reserva/'+$("#id").val(), // Reemplaza con la URL de tu API
+        url: 'http://localhost:8080/v1/ProyectoFinalJDH/Reserva/' + $("#id").val(),
         method: 'PUT',  // Cambia a 'PUT' si es una actualización
         contentType: 'application/json',
         data: JSON.stringify(jsonData),
-        success: function(response) {
+        success: function (response) {
             alert('Datos se modificaron exitosamente:', response);
             // Puedes realizar acciones adicionales después de guardar los datos
 
@@ -139,20 +139,20 @@ function update(){
             all();
             cleanData();
         },
-        error: function(error) {
+        error: function (error) {
             alert('Error al modificar datos:', error);
         }
-    });    
+    });
 }
 
-function deletePhysical(id){
- 
+function deletePhysical(id) {
+
     // Enviar datos al servidor mediante AJAX
     $.ajax({
-        url: 'http://localhost:9000/v1/ProyectoFinalJDH/Reserva/'+id, // Reemplaza con la URL de tu API
+        url: 'http://localhost:8080/v1/ProyectoFinalJDH/Reserva/' + id,
         method: 'DELETE',  // Cambia a 'PUT' si es una actualización
         contentType: 'application/json',
-        success: function(response) {
+        success: function (response) {
             alert('Datos se eliminó exitosamente de manera permanente:', response);
             // Puedes realizar acciones adicionales después de guardar los datos
 
@@ -160,36 +160,36 @@ function deletePhysical(id){
             all();
             cleanData();
         },
-        error: function(error) {
+        error: function (error) {
             alert('Error al eliminar dato:', error);
         }
-    });  
+    });
 }
 
-function deleteLogical(id){
-   // Crear un objeto JSON con los datos
+function deleteLogical(id) {
+    // Crear un objeto JSON con los datos
     var jsonData = {
     };
     // Enviar datos al servidor mediante AJAX
     $.ajax({
-        url: 'http://localhost:9000/v1/ProyectoFinalJDH/Reserva/'+id, // Reemplaza con la URL de tu API
+        url: 'http://localhost:8080/v1/ProyectoFinalJDH/Reserva/' + id,
         method: 'PUT',  // Cambia a 'PUT' si es una actualización
         contentType: 'application/json',
         data: JSON.stringify(jsonData),
-        success: function(response) {
+        success: function (response) {
             alert('Dato se eliminó exitosamente:', response);
             // Puedes realizar acciones adicionales después de guardar los datos
 
             //Cargar o actaulizar los datos
             all();
         },
-        error: function(error) {
+        error: function (error) {
             alert('Error al eliminar el registro:', error);
         }
-    });  
+    });
 }
 
-function cleanData(){
+function cleanData() {
     $("#id").val("");
     $("#usuarioId").val("");
     $("#transporteId").val("");

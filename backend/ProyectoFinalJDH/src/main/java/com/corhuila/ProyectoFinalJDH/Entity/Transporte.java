@@ -25,24 +25,6 @@ public class Transporte {
 	@Column(name = "empresa", length = 20, nullable = false)
 	private String empresa;
 	
-	@Column(name = "origen", length = 20, nullable = false)
-	private String origen;
-	
-	@Column(name = "destino", length = 20, nullable = false)
-	private String destino;
-	
-	@Column(name = "fecha_inicio", length = 50, nullable = false)
-	private String fechaInicio;
-	
-	@Column(name = "fecha_final", length = 50, nullable = false)
-	private String fechaFinal;
-	
-	@Column(name = "hora_viaje_ida", length = 50, nullable = false)
-	private String horaViajeida;
-	
-	@Column(name = "hora_viaje_vuelta", length = 50, nullable = false)
-	private String horaViajevuelta;
-	
 	@Column(name = "costo", nullable = false)
 	private int costo;
 	

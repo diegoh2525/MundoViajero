@@ -45,12 +45,6 @@ public class TransporteService implements ITransporteService {
             Transporte transporteUpdate = op.get();
             transporteUpdate.setTipo(transporte.getTipo());
             transporteUpdate.setEmpresa(transporte.getEmpresa());
-            transporteUpdate.setOrigen(transporte.getOrigen());
-            transporteUpdate.setDestino(transporte.getDestino());
-            transporteUpdate.setFechaInicio(transporte.getFechaInicio());
-            transporteUpdate.setFechaFinal(transporte.getFechaFinal());
-            transporteUpdate.setHoraViajeida(transporte.getHoraViajeida());
-            transporteUpdate.setHoraViajevuelta(transporte.getHoraViajevuelta());
             transporteUpdate.setCosto(transporte.getCosto());
             transporteUpdate.setFechaModificacion(LocalDateTime.now());
             

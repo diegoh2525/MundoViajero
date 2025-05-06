@@ -62,7 +62,7 @@ nav.navbar {
 
 /* HERO section */
 .hero {
-    background: url('/asset/img/mapa-mundo.png') center/cover no-repeat;
+    background: url('/asset/img/viaje.jpg') center/cover no-repeat;
     padding: 100px 20px;
     text-align: center;
     color: white;
@@ -78,25 +78,8 @@ nav.navbar {
     font-size: 18px;
     max-width: 700px;
     margin: 0 auto 30px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 }
-
-.btn-hero {
-    margin-top: 20px;
-    background-color: #FFDB93;
-    color: #54362D;
-    font-size: 20px;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-hero:hover {
-    background-color: #f6c85f;
-}
-
 
 .experiencias {
     padding: 60px 20px;
@@ -273,4 +256,90 @@ footer {
 .menu-perfil a:hover {
     background-color: #301f1a;
     border-radius: 8px;
+}
+
+.contacto {
+    background-color: #fff;
+    background: url('/asset/img/paisaje2.jpg') center/cover no-repeat;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contacto h3 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.contacto p {
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 24px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.contacto form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contacto input,
+.contacto textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.contacto button {
+    padding: 15px;
+    background-color: #54362D;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contacto button:hover {
+    background-color: #FFDB93;
+    color: #54362D;
+}
+
+.mensaje-exito {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #FFDB93;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1000;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: visibility 0s, opacity 0.3s ease;
+    opacity: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
 }

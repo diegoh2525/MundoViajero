@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bienvenido a Mundo Viajero</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="../../js/ProyectoFinal/vista-cliente.js"></script>
+  <link rel="stylesheet" href="../../asset/css/estilos-cliente.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR con estilo similar a la imagen -->
+  <nav class="navbar">
+    <a href="/view/Cliente/vista-cliente.html" class="logo">
+      Mundo Viajero <span class="badge-cliente">Cliente</span>
+    </a>
+    <div class="menu">
+      <a href="#">Servicios</a>
+      <a href="#">¿Quiénes Somos?</a>
+      <a href="#">Contacto</a>
+      <button class="btn-reservar" onclick="location.href='/view/Cliente/reserva-cliente.html'">Reservar</button>
+
+      <div class="perfil-dropdown">
+        <i class="fas fa-user-circle icono-perfil" onclick="togglePerfilMenu()"></i>
+        <div id="menuPerfil" class="menu-perfil">
+          <a href="/view/Cliente/perfil-cliente.html">👤 Mi Perfil</a>
+          <a href="/view/Cliente/mis-reservas.html">📅 Mis Reservas</a>
+          <a href="#" onclick="cerrarSesion()">🚪 Cerrar sesión</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<!-- Sección Hero Modificada -->
+<section class="hero">
+  <h2>¿Y cuál es tu próximo destino, <span id="nombreHero">viajero</span>?</h2>
+  <button class="btn-hero" onclick="location.href='/view/Cliente/reserva-cliente.html'">¡Reserva Ya!</button>
+</section>
+
+
+  <!-- Sección de experiencias -->
+  <section class="experiencias">
+    <h3>Experiencias de nuestros viajeros</h3>
+    <div class="cards">
+      <div class="card">
+        <p>"Gracias a Mundo Viajero, tuve el mejor viaje de mi vida a San Andrés. Todo fue perfecto!"</p>
+        <div class="usuario">– Laura M.</div>
+      </div>
+      <div class="card">
+        <p>"Reservé mi transporte y alojamiento en minutos. 100% recomendado."</p>
+        <div class="usuario">– Andrés G.</div>
+      </div>
+      <div class="card">
+        <p>"Las actividades fueron geniales. Disfruté cada segundo. Volveré a usar la plataforma."</p>
+        <div class="usuario">– Camila R.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    Desarrollado por JD Herrera &copy; 2025 - Mundo Viajero
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <!-- MODAL DE BIENVENIDA -->
+  <div id="modalBienvenida" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModal()">&times;</span>
+      <h2>¡Bienvenido/a de nuevo, <span id="nombreCliente">viajero</span>! 👋</h2>
+      <p>Tu espacio personal para gestionar reservas, explorar destinos y más.</p>
+    </div>
+  </div>
+
+</body>
+
+</html>

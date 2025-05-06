@@ -1,0 +1,128 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+.navbar {
+    background-color: #54362D;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.badge-cliente {
+    background-color: #FFDB93;
+    color: #54362D;
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    border-radius: 5px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .menu a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar .menu a:hover {
+    color: #FFDB93;
+}
+
+.contenedor-reserva {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contenedor-reserva h2 {
+    margin-bottom: 10px;
+    color: #54362D;
+}
+
+.contenedor-reserva p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+form .campo {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    color: #333;
+    font-weight: 600;
+}
+
+form select,
+form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.btn-reservar {
+    background-color: #54362D;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-reservar:hover {
+    background-color: #FFDB93;
+    color: #000;
+}
+
+#mensaje-confirmacion {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #dff9fb;
+    color: #130f40;
+    border: 1px solid #c7ecee;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.oculto {
+    display: none;
+}
+
+footer {
+    background-color: #54362D;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 18px;
+}
+

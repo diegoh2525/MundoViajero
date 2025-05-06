@@ -2,6 +2,7 @@ package com.corhuila.ProyectoFinalJDH.Entity;
 
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 import jakarta.persistence.*;
@@ -46,6 +47,9 @@ public class Reserva {
 
 	@Column(name = "estado")
 	private Boolean estado;
+
+	@Column(name = "fecha_viaje")
+	private Date fechaViaje;
 
 	@Column(name = "fecha_creacion")
 	private LocalDateTime fechaCreacion;
