@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="da7c7b64-504a-4a04-a1a9-6302954ccd91" name="Changes" comment="Archivos CSS añadidos">
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/Controller/ActividadesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/Controller/AlojamientoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/Controller/ReservaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/Controller/TransporteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/Controller/UsuarioController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/DTO/CostosReservaDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/Entity/Actividades.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/Entity/Alojamiento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/Entity/Reserva.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/Entity/Transporte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/Entity/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/IRepository/IActividadesRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/IRepository/IAlojamientoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/IRepository/IReservaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/IRepository/ITransporteRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/IRepository/IUsuarioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/IService/IActividadesService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/IService/IAlojamientoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/IService/IReservaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/IService/ITransporteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/IService/IUsuarioService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/ProyectoFinalApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/Service/ActividadesService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/Service/AlojamientoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/Service/ReservaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/Service/TransporteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/java/com/corhuila/ProyectoFinal/Service/UsuarioService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProyectoFinal/src/test/java/com/corhuila/ProyectoFinal/ProyectoFinalApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Controller/ActividadesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Controller/AlojamientoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Controller/ReservaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Controller/TransporteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Controller/UsuarioController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/DTO/Request/ActividadesRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/DTO/Request/AlojamientoRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/DTO/Request/ReservaRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/DTO/Request/TransporteRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/DTO/Request/UsuarioRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/DTO/Response/ActividadesResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/DTO/Response/AlojamientoResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/DTO/Response/ReservaResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/DTO/Response/TransporteResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/DTO/Response/UsuarioResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Entity/Actividades.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Entity/Alojamiento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Entity/Reserva.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Entity/Transporte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Entity/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Mapper/ActividadesMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Mapper/AlojamientoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Mapper/ReservaMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Mapper/TransporteMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Mapper/UsuarioMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/ProyectoFinalJdhApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Repository/ActividadesRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Repository/AlojamientoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Repository/ReservaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Repository/TransporteRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Repository/UsuarioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Service/ActividadesService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Service/AlojamientoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Service/IService/IActividadesService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Service/IService/IAlojamientoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Service/IService/IReservaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Service/IService/ITransporteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Service/IService/IUsuarioService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Service/ReservaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Service/TransporteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/corhuila/ProyectoFinalJDH/Service/UsuarioService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/corhuila/ProyectoFinalJDH/ProyectoFinalJdhApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/asset/css/estilos-administrador.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/asset/css/estilos-cliente.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/asset/css/estilos-index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/asset/css/estilos-login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/asset/css/estilos-reserva.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/asset/css/estilos-vadmin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/asset/img/mapa-mundo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/asset/img/paisaje.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/asset/img/paisaje2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/asset/img/viaje.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/js/ProyectoFinal/actividades.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/js/ProyectoFinal/alojamiento.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/js/ProyectoFinal/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/js/ProyectoFinal/reserva-cliente.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/js/ProyectoFinal/reservas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/js/ProyectoFinal/rol.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/js/ProyectoFinal/transporte.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/js/ProyectoFinal/usuario.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/js/ProyectoFinal/vista-cliente.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/view/Administrador/actividades.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/view/Administrador/alojamiento.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/view/Administrador/reservas.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/view/Administrador/rol.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/view/Administrador/transporte.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/view/Administrador/usuario.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/view/Administrador/vista-administrador.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/view/Cliente/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/view/Cliente/reserva-cliente.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/view/Cliente/vista-cliente.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2vHUxx7IECHfsXVlpPhTA3vAjbF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.ProyectoFinalJdhApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/jdher/OneDrive/Escritorio/MundoLavado-Backend/ProyectoFinalJDH",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="ProyectoFinalJdhApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="ProyectoFinalJDH" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.corhuila.ProyectoFinalJDH.ProyectoFinalJdhApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Physical" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="da7c7b64-504a-4a04-a1a9-6302954ccd91" name="Changes" comment="" />
+      <created>1743801742824</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743801742824</updated>
+      <workItem from="1743801744148" duration="855000" />
+      <workItem from="1743802689146" duration="806000" />
+      <workItem from="1744032051395" duration="2626000" />
+      <workItem from="1744036621798" duration="4725000" />
+      <workItem from="1744054273971" duration="9289000" />
+      <workItem from="1744378870333" duration="6771000" />
+      <workItem from="1744643269244" duration="3416000" />
+      <workItem from="1744647240148" duration="5362000" />
+      <workItem from="1744665545795" duration="593000" />
+      <workItem from="1744724828466" duration="1288000" />
+      <workItem from="1744746981342" duration="679000" />
+      <workItem from="1744810131491" duration="3813000" />
+      <workItem from="1745524621700" duration="3465000" />
+      <workItem from="1745957019034" duration="5757000" />
+      <workItem from="1746041241585" duration="4938000" />
+      <workItem from="1746143660142" duration="598000" />
+      <workItem from="1746459194205" duration="1379000" />
+      <workItem from="1746539260002" duration="3781000" />
+      <workItem from="1746624944402" duration="1246000" />
+      <workItem from="1746626256600" duration="204000" />
+      <workItem from="1746626481225" duration="761000" />
+      <workItem from="1746627265608" duration="2430000" />
+      <workItem from="1746712324612" duration="297000" />
+      <workItem from="1746712638869" duration="1395000" />
+      <workItem from="1746719940270" duration="91000" />
+    </task>
+    <task id="LOCAL-00001" summary="Nuevo metodo obtener detalle y total costo">
+      <option name="closed" value="true" />
+      <created>1744054672311</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744054672311</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Agregacion de mapper y DTOs (Response/Request)">
+      <option name="closed" value="true" />
+      <created>1744063011816</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744063011816</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Campo de estado añadido en Usuario">
+      <option name="closed" value="true" />
+      <created>1744063071415</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744063071415</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Funcion de login añadida">
+      <option name="closed" value="true" />
+      <created>1744383789981</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1744383789981</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Funcion de login añadida">
+      <option name="closed" value="true" />
+      <created>1744383838005</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1744383838005</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Archivos CSS añadidos">
+      <option name="closed" value="true" />
+      <created>1744648044191</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1744648044191</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Archivos CSS añadidos">
+      <option name="closed" value="true" />
+      <created>1744648087352</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1744648087352</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Nuevo metodo obtener detalle y total costo" />
+    <MESSAGE value="Agregacion de mapper y DTOs (Response/Request)" />
+    <MESSAGE value="Campo de estado añadido en Usuario" />
+    <MESSAGE value="Funcion de login añadida" />
+    <MESSAGE value="Funcion de registro" />
+    <MESSAGE value="Archivos CSS añadidos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Archivos CSS añadidos" />
+  </component>
+</project>
